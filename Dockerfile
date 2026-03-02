@@ -1,6 +1,6 @@
 FROM docker.io/oraclelinux:9
 LABEL maintainer="Felipe Raposo <feliperaposo@gmail.com>"
-RUN curl https://packages.microsoft.com/config/rhel/8/prod.repo | tee /etc/yum.repos.d/mssql-release.repo
+RUN curl -o /etc/yum.repos.d/mssql-release.repo https://packages.microsoft.com/config/rhel/9/prod.repo
 RUN dnf -y update && \
     ACCEPT_EULA=Y dnf install -y unixODBC postgresql-odbc msodbcsql18 && \
     dnf clean all && \
