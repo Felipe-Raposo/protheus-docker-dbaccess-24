@@ -3,7 +3,7 @@ export DOCKER_BUILDKIT := 1
 IMAGE_REPO := feliperaposo
 NAME := $(IMAGE_REPO)/protheus-dbaccess
 VERSION := 24
-MINOR_VERSION := 24.1.1.1
+MINOR_VERSION := 24.1.1.3
 
 .PHONY: build release release_latest
 
