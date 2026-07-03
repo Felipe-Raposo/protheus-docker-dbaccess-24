@@ -9,4 +9,5 @@ sed 's/{{PROTHEUS_USER}}/'"${PROTHEUS_USER:-"protheus"}"'/g'         -i /dbacces
 sed 's/{{PROTHEUS_PASSWORD}}/'"${PROTHEUS_PASSWORD:-"protheus"}"'/g' -i /dbaccess/multi/dbaccess.ini
 
 cd /dbaccess/multi/
-./dbaccess64
+# exec: dbaccess64 assume o PID 1 e recebe SIGTERM do "docker stop" (shutdown gracioso).
+exec ./dbaccess64

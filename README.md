@@ -36,7 +36,7 @@ make release_latest
 Gera as tags:
 
 - `feliperaposo/protheus-dbaccess:24`
-- `feliperaposo/protheus-dbaccess:24.1.1.1`
+- `feliperaposo/protheus-dbaccess:24.1.1.3`
 - `feliperaposo/protheus-dbaccess:latest`
 
 ## Estrutura interna (referência)
