@@ -4,7 +4,7 @@ RUN curl -o /etc/yum.repos.d/mssql-release.repo https://packages.microsoft.com/c
     dnf -y update && \
     ACCEPT_EULA=Y dnf install -y unixODBC postgresql-odbc msodbcsql18 && \
     dnf clean all
-EXPOSE 7890/tcp
+EXPOSE 7890/tcp 7891/tcp
 COPY ./root/ /
 RUN cat /etc/odbcinst_psql.ini >> /etc/odbcinst.ini && \
     rm -f /etc/odbcinst_psql.ini

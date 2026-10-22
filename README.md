@@ -10,6 +10,7 @@ Este projeto monta uma imagem Docker dbAccess 24.x.y.z, sobre Oracle Linux 9. A 
 
 - **Base:** Oracle Linux 9
 - **dbAccess:** porta TCP 7890 (default)
+- **DBAPI:** `dbapi.so` publicado em `http://<host>:7891/dbapi.so` para o AppServer baixar na inicialização
 - **Configuração dinâmica:** Banco de dados, usuário e senha definidos via variáveis de ambiente `PROTHEUS_DB`, `PROTHEUS_USER` e `PROTHEUS_PASSWORD`
 
 ## Pré-requisitos
@@ -42,6 +43,7 @@ Gera as tags:
 ## Estrutura interna (referência)
 
 - **Entrypoint:** `/dbaccess.sh`
+- **DBAPI:** `/dbaccess/client/dbapi.so`, servido na porta TCP 7891 antes do `dbaccess64`
 - **Configuração:** `/dbaccess/multi/dbaccess.ini` (parâmetros `{{PROTHEUS_DB}}` ,`{{PROTHEUS_USER}}` e `{{PROTHEUS_PASSWORD}}` substituídos em runtime)
 
 ## Licença
